@@ -1,6 +1,7 @@
 # Twitter Manager
 
-![Build Status](link-to-build-status-badge) ![License](https://img.shields.io/github/checks-status/BigAddict/TwitterManagerBot/master)
+![Build Status](https://img.shields.io/github/checks-status/BigAddict/TwitterManagerBot/master) ![License](https://img.shields.io/github/license/BigAddict/TwitterManagerBot
+)
 
 ## Table of Contents
 - [Description](#description)
