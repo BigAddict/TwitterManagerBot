@@ -14,7 +14,4 @@ wheels/
 
 # Log files
 twitterbot.log
-
-# Play ground files
-Play2.py
-playground.py
+*.log

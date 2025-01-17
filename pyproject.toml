@@ -1,12 +1,21 @@
 [project]
 name = "twittermanager"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.0.0"
+description = "Twitter Manager is a Python-based application that allows users to automate the posting of tweets on Twitter. It utilizes the Tweepy API for Twitter interactions and integrates AI content generation to create engaging tweets. The application can post tweets instantly or schedule them for daily posting."
 readme = "README.md"
+license = { text = "MIT" }
+authors = [{name = "David Maina", email = "davidnjihia536@gmail.com"}]
 requires-python = ">=3.10"
 dependencies = [
     "google-genai>=0.5.0",
     "python-dotenv>=1.0.1",
     "schedule>=1.2.2",
     "tweepy>=4.15.0",
+    "pytest>=6.0.0"  # Added for testing
+]
+keywords = ["twitter", "automation", "tweepy", "AI"]  # Added for discoverability
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
 ]

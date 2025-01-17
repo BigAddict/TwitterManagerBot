@@ -9,11 +9,11 @@ import random
 import schedule
 import time
 
-#Logs
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', filename="twitterbot.log", filemode="a")
+# Logs
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s - %(filename)s', filename="twitterbot.log", filemode="a")
 logger = logging.getLogger()
 
-# Load enviroment variables
+# Load environment variables
 load_dotenv()
 
 prompts = [
@@ -147,7 +147,7 @@ class TwitterBot:
 
     def post_random_prompt(self):
         prompt = random.choice(prompts)
-        logger.info(f"Choosen prompt: {prompt}")
+        logger.info(f"Chosen prompt: {prompt}")
         content = self.ai.generate_tweet(prompt)
         logger.info(f"Generated content")
         
@@ -170,7 +170,6 @@ class TwitterBot:
             logger.info("Stopping scheduler")
 
 def main():
-    choice = input("Enter '1' for instant post or '2' for scheduled posting: ")
     bot = TwitterBot()
     bot.schedule_daily_tweet()
 

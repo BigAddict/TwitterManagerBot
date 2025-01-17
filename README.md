@@ -1,46 +1,63 @@
 # Twitter Manager
 
+![Build Status](link-to-build-status-badge) ![License](https://img.shields.io/github/checks-status/BigAddict/TwitterManagerBot/master)
+
+## Table of Contents
+- [Description](#description)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Description
-Twitter Manager is a Python-based application that allows users to automate the posting of tweets on Twitter. It utilizes the Tweepy API for Twitter interactions and integrates AI content generation to create engaging tweets. The application can post tweets instantly or schedule them for daily posting.
+Twitter Manager is a Python-based application that automates the posting of tweets on Twitter using the Tweepy API and integrates AI content generation for engaging tweets.
 
 ## Features
-- **Automated Tweet Posting**: Post tweets instantly or schedule them for later.
-- **AI Content Generation**: Generate tweet content using the Gemini API.
-- **Rate Limit Management**: Automatically handles Twitter API rate limits.
-- **Environment Variable Support**: Load sensitive information from environment variables for secure API access.
+- Automated Tweet Posting
+- AI Content Generation
+- Rate Limit Management
+- Environment Variable Support
 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/TwitterManager.git
+   git clone https://github.com/BigAddict/TwitterManager.git
    cd TwitterManager
    ```
 2. Install the required packages:
    ```bash
-   pip install -r requirements.txt
+   pip install .
    ```
 
 ## Usage
 1. Set up your environment variables in a `.env` file:
    ```
-   API_KEY=your_api_key
-   API_KEY_SECRET=your_api_key_secret
-   ACCESS_TOKEN=your_access_token
-   ACCESS_TOKEN_SECRET=your_access_token_secret
-   BEARER_TOKEN=your_bearer_token
-   GEMINI_API=your_gemini_api_key
-
-   BLOG_PROMPT=prompt_to_generate_a_blog
-   TWITTER_PROMPT=prompt_to_generate_tweet
-
+   API_KEY=""
+   API_KEY_SECRET=""
+   ACCESS_TOKEN=""
+   ACCESS_TOKEN_SECRET=""
+   BEARER_TOKEN=""
+   GEMINI_API=""
+   BLOG_PROMPT=""
+   TWITTER_PROMPT=""
    ```
+
 2. Run the application:
    ```bash
    python main.py
    ```
 
+## Testing
+To run the tests, use the following command:
+```bash
+pytest
+```
+*This will run the included unit tests to ensure functionality.*
+
 ## Contributing
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features you'd like to add.
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or features you'd like to add. For more details, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
