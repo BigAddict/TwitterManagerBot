@@ -6,7 +6,6 @@ from dotenv import load_dotenv as load_env
 import logging
 import os
 import random
-import schedule
 import time
 
 # Logs
@@ -179,20 +178,10 @@ class TwitterBot:
         posted_ids = self.twitter.post_thread(tweets)
         logger.info(f"Thread posted with tweet IDs: {posted_ids}")
 
-    def schedule_daily_tweet(self):
-        """Schedules a daily tweet at 03:00."""
-        schedule.every().day.at("03:00").do(lambda: self.post_random_prompt())
-        try:
-            while True:
-                schedule.run_pending()
-                time.sleep(1)
-        except KeyboardInterrupt:
-            logger.info("Stopping scheduler")
-
 def main():
     """Main function to run the Twitter bot."""
     bot = TwitterBot()
-    bot.schedule_daily_tweet()
+    bot.post_random_prompt()
 
 if __name__ == "__main__":
     main()
