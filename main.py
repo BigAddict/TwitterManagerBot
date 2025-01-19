@@ -142,14 +142,16 @@ class AIContent:
     def generate_content(self, prompt: str):
         """Generates content based on the provided prompt."""
         bot_response = self.client.models.generate_content(
-            model="gemini-2.0-flash-exp", contents=prompt
+            model="gemini-2.0-flash-exp", contents=prompt,
+            config=self.configure(1)
         )
         return bot_response.text
     
     def generate_tweet(self, content: str):
         """Generates a tweet based on the provided content."""
         return self.client.models.generate_content(
-            model="gemini-2.0-flash-exp", contents=content
+            model="gemini-2.0-flash-exp", contents=content,
+            config=self.configure(2)
         ).text
     
 
